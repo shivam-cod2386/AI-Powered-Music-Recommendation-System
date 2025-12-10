@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
+from scikit-learn.feature_extraction.text import TfidfVectorizer
+from scikit-learn.metrics.pairwise import linear_kernel
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Music Recommender", page_icon="🎵", layout="centered")
@@ -75,4 +75,5 @@ if st.button("Recommend"):
     
     # Display results nicely
     for i, song in enumerate(recommendations):
+
         st.subheader(f"{i+1}. {song}")
